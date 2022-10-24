@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Bruno
  */
-public class Jogodaforca {
+public class prototicoforca {
 
     public static void main(String[] args) {
         
