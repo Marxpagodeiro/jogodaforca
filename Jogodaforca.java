@@ -19,14 +19,8 @@ public class Jogodaforca {
         Random random = new Random(); // pegar aleatoriamente  
         
         // lista de palavras
-        String[] palavras = {"java","logica","programacao","algoritmo"};
-        
-        
-        // sorteio de palavras
-        int quantPa = palavras.length; // tamanho do vetor
-        int indiceSorte = random.nextInt(quantPa); // posição do vetor para palavra sorteada.
-        String palavraSort = palavras[indiceSorte]; // palavra sorteada
-        
+        String[] palavras = {"java","logica","programacao","algoritmo","tecnico","segunda","casa","ifes","informatica"};
+        String palavraSort = palavraS(palavras); 
         String letrasUsadas = "";
         char letras;
         char[] letrasCertas = new char[palavraSort.length()];// controlar o acertos do usuario 
@@ -73,8 +67,6 @@ public class Jogodaforca {
             }
             System.out.println("\n");
         }
-        
-        
         if(vidas<1){
             System.out.println("\n Você perdeu, mas sorte da proxima vez.");
             System.out.println("\n A palavra era: " + palavraSort);
@@ -82,6 +74,14 @@ public class Jogodaforca {
             System.out.println(" \n Voce ganhou,parabéns seu QI é maior que o de um bolsominiom.");
         }
         System.out.println("Obrigado por jogar meu jogo");
+    }
+        // sorteio de palavras
+    public static String palavraS(String[] palavras){
+        Random random = new Random();
+        int quantPa = palavras.length; // tamanho do vetor
+        int indiceSorte = random.nextInt(quantPa); // posição do vetor para palavra sorteada.
+        String palavraSort = palavras[indiceSorte];// palavra sorteada
+        return palavraSort;
     }
 }
    
