@@ -22,6 +22,7 @@ public class Jogodaforca {
         String palavra;
         char letra;
         int i=0;
+        
         System.out.println("qual a palavra? ");
         palavra = in.next();
         System.out.println("qual é a letra?");
@@ -30,6 +31,10 @@ public class Jogodaforca {
         char[] enigma = new char[palavra.length()];
         enigma = sublinhado(enigma);
         substituiLetra(palavra,letra,enigma);
+        boolean buscRep = buscarRepositorio(enigma,letra);
+        boolean ganhou = ganhou(enigma);
+        char[] insLet = inserirLetra(enigma,letra);
+        String listRep = listarRepositorio(enigma);
         
         
        
@@ -87,5 +92,14 @@ public class Jogodaforca {
         return resp;
         
     }
+    public static boolean ganhou(char[] vet){
+        boolean resp = true;
+        for(int i =0;i<vet.length;i++){
+            if(vet[i] == '_'){
+                resp=false;
+            }
+        }
+        return resp;
+    } 
     
 }
